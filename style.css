@@ -1,0 +1,558 @@
+* {
+    box-sizing: border-box;
+  }
+  .lightmode{
+    
+    --h5:white;
+    --wrapper-background:rgb(230, 225, 225);
+    --body-background:rgb(201, 200, 200);
+    --h1-h2-h3:#000000;
+    --footer-color:rgb(189, 188, 188);
+    --card-background:rgba(59, 59, 70, 0.3);
+    --card-border:2px solid #77e9f1; 
+    --navbar-color:rgb(173, 169, 169);
+    --navbar-border:2px solid #77e9f1;
+    --aboutmeheader-color:rgba(59, 59, 70, 0.3);
+    --aboutmeheader-border:2px solid #77e9f1;
+    --gallery-shadow:0 0 15px rgba(94, 214, 204, 0.479);
+    --navbar-active-color:#8f8e8a;
+    --light-toggle-button-color:#413f3f;
+     
+  }
+  .normalmode{
+    --h5:white;
+    --wrapper-background:black;
+    --body-background:rgb(36, 36, 36);
+    --h1-h2-h3:#d9cd3e;
+    --footer-color:rgb(76 76 76);
+    --card-background:rgba(117, 117, 137, 0.3);
+    --card-border:1px solid #d9cd3e; 
+    --navbar-color:rgb(76 76 76);
+    --navbar-border:1px solid #d9cd3e;
+    --aboutmeheader-color:rgb(35 35 41);
+    --aboutmeheader-border:1px solid #d9cd3e; 
+    --gallery-shadow:0 0 15px rgba(255, 230, 0, 0.3);
+    --navbar-active-color:#d9cd3e;
+    --light-toggle-button-color:#e4e0e0;
+  }
+  body{
+    padding: 0px 50px;
+    font-family: 'Courier New', monospace !important;
+    margin: 0px 8px ;
+  
+    background: var(--body-background);
+    
+    
+  }
+  #wrapper{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--wrapper-background);
+    border-style:dotted;
+    border-width: 1px;
+    
+  }
+  footer{
+    text-align: center;
+    font-size: inherit;
+    padding: 5px;
+    background: var(--footer-color);
+    clear: both;
+    height: 50px;
+    padding-top: 18px;
+    color: inherit;
+  }
+  
+  header img{
+    width: 100%;
+    height: auto;
+  }
+  h1, h2, h3{
+    color: var(--h1-h2-h3);
+  }
+  h5{
+    color: var(--h5);
+  }
+  p{
+    color: white;
+  }
+  a:visited{
+    color: #d9cd3e;
+  }
+  ul.navigation{
+      border: 1px solid #000000;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: rgb(70, 44, 44);
+      border-radius: 0 0 20px 20px;
+      
+      
+      
+    }
+    #topnav{
+      border-radius: 0%;
+    }
+   ul.navigation li{
+      float: left;
+      border-right: 1px solid rgb(0, 0, 0);
+    }
+   ul.navigation li a {
+      display: block;
+      color: #000000;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      
+    }
+    ul.navigation li a:hover:not(.active) {
+      background-color: rgb(88, 88, 88);
+    }
+    ul.navigation input[type=text] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
+    ul.navigation  button {
+      float: right;
+      padding: 6px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    .active {
+      background-color: var(--navbar-active-color);
+    }
+   
+  #light-mode-toggle{
+      background-color: var(--light-toggle-button-color);
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+  }
+  
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  .card {
+    background-color: var(--card-background);
+    padding: 20px;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 1px; 
+    border-radius: 25px;
+    color: inherit;
+    border: var(--card-border);
+    
+  }
+  .row{
+    color: #d9cd3e;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .fill {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+  }
+  /* fix su index.tml nuotraukas */
+  .fill img {
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 1000px;
+    height: 780px;
+  }
+  .content{
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+  }
+  .content:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  div.gallery{
+    padding: 0px;
+    margin: 30px;
+    color: inherit;
+    float: left;
+    width: 245px;
+    height: 300px;
+    border-radius: 20px;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #d9cd3e;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: 260px;
+  
+  }
+  #aboutme p{
+    font-size: 10px;
+    float: right;
+  }
+  #order{
+    border-style: solid;
+    border-width: 1px;
+    width: 513px;;
+    margin:0 auto;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* schema */
+  #wrapper2{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: #0044ff;;
+    border-style:dotted;
+    border-width: 1px;
+  }
+  #header1{
+    border-style: solid;
+    border-width: 1px;
+    background: #666;
+    height: 150px;
+  }
+  #header1 h2{
+    border-style: solid;
+    border-width: 1px;
+    background:#ccc;
+    margin: 0%;
+  }
+  #navigationtext{
+    margin: 0%;
+    background: #04AA6D;
+  }
+  #navigation1{
+    background: rgb(81, 255, 0);
+  }
+  #row1{
+    background:#666
+  }
+  #leftcolumn1{
+    background:#ccc;
+  }
+  .card1{
+    background-color:brown;
+    padding: 20px;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 1px;
+   
+  }
+  #fill1{
+    background:#04AA6D;
+  }
+  #rightcolumn1{
+    background: rgb(148, 147, 147);
+  }
+  /* new stuff */
+  #about div.fill img{
+    min-width: 50%;
+    width: 50px; 
+    height: 500px; 
+  
+  }
+  /* is row paveldi spalva */
+  #aboutmeheader{
+    text-align: center;
+    border: 1px solid;
+    margin-top: 10px;
+    border-style: solid;
+    background-color: var(--aboutmeheader-color);
+    border-radius: 25px;
+    color: inherit;
+    border: var(--aboutmeheader-border);
+  }
+  .test img{
+    
+    max-width: 100%;
+    max-height: 100%;
+    float: left;
+  }
+  
+  .clear{
+    clear: both;
+  }
+  .info{
+    margin-left: 410px;
+  }
+  .info img{
+    max-width: 100%;
+    max-height: 100%;
+    float: right;  
+  }
+  .igudziai{
+    margin-left: 410px;
+  }
+  .igudziaicontainer {
+    width: 100%;
+    background-color: #ddd;
+  }
+  .skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+  }
+  .html {width: 80%; background-color: #d9cd3e;}
+  .vegas {width: 60%; background-color: #d9cd3e;}
+  .photo {width: 75%; background-color: #d9cd3e;}
+  .ilustrator {width: 75%; background-color: #d9cd3e;}
+  
+  .leftcolumn2{
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  .rightcolumn2{
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+  }
+  .middlecolumn{
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    padding-left: 20px;
+  }
+  /* formos */
+  .col-75 input[type=number], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: white;
+  }
+  
+  .col-75 input[type=submit] {
+    background-color: #d9cd3e;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  .col-25 {
+    text-align: right;
+    
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #photo img{
+    width: 100%;
+    height: 500px;
+  }
+  .navbar {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0 0 20px 20px;
+    border: var(--navbar-border);
+    background-color: var(--navbar-color);
+    text-align: center;
+  }
+  .navbar .navbar-nav .nav-item .nav-link{
+    border-radius: 10px 10px 10px 10px;
+    color: #000000;
+  }
+  .navbar-toggler{
+    background-color: grey;
+  }
+  .img-fluid {
+    height: 100%;
+  }
+  .img-thumbnail{
+    border: 4px solid #d9cd3e;
+  }
+  img{
+      height: 100%;
+  
+  }
+  .gallery{
+      padding: 80px 0;
+  }
+  .gallery img{
+      padding: 15px;
+      width: 100%;
+      box-shadow: var(--gallery-shadow);
+      cursor: pointer;
+  }
+  #gallery-modal .modal-img{
+      width: 100%;
+  }
+  .modal-body{
+    background-color:rgba(117, 117, 137, 0.3);
+  }
+  .modal-header{
+    background-color:rgba(117, 117, 137, 0.3);
+  }
+  
+  /*Pc fixes*/
+  @media only screen and (min-width: 1080px) and (max-width: 1520px) {
+    .igudziai{
+      clear: both;
+      float: left;
+      margin-left: 0%;
+      width: 100%;
+    }
+    
+  
+  }
+  
+  
+  
+  /* Tablet */
+  @media only screen and (min-width: 900px) and (max-width: 1080px) {
+    .leftcolumn, .rightcolumn, .right ,div.gallery ,.leftcolumn2 ,.rightcolumn2 ,.middlecolumn{
+      width: 100%;
+  
+      height: 100%;
+      
+    }
+    .leftcolumn2{
+      display: none;
+      
+    }
+    div.gallery img{
+      width: 100%;
+    }
+    div.gallery{
+      width: 50%;
+      margin-left: 25%;
+    }
+    h1{
+      font-size:4vw
+    }
+    h2{
+      font-size: 3vw;
+    }
+    h3{
+      font-size: 2vw;
+    }
+    h5{
+      font-size: 2vw;
+    }
+    p{
+      font-size: 1.5vw;
+    }
+    
+  
+  
+    .test, .info ,.igudziai, .info img , .igudziaicontainer{
+      padding-left: 0%;
+      clear: both;
+      margin-left: auto;
+      width: 100%;
+    }
+      
+  
+  }
+  /* Telefonams */
+  @media only screen and (max-width: 900px) {
+    .leftcolumn, .rightcolumn, .right ,div.gallery,.rightcolumn2 ,.middlecolumn{
+      width: 100%;
+  
+      height: 100%;
+      
+    }
+    div.gallery img{
+      width: 100%;
+    }
+    div.gallery{
+      width: 50%;
+      margin-left: 25%;
+    }
+    h1{
+      font-size:6vw
+    }
+    h2{
+      font-size: 3vw;
+    }
+    h3{
+      font-size: 5vw;
+    }
+    h5{
+      font-size: 2vw;
+    }
+    p{
+      font-size: 3vw;
+    }
+    .leftcolumn2{
+      display: none;
+    }
+  
+  
+    .test, .info ,.igudziai, .info img , .igudziaicontainer{
+      padding-left: 0%;
+      clear: both;
+      margin-left: auto;
+      width: 100%;
+    }
+      
+  
+  }
+    
+    
+  
+  
+  
+  
+  
+    
+  
